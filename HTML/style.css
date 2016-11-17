@@ -35,6 +35,10 @@ h3 a {
 
 }
 
+.container.create-quizz h1{
+    border: 1px solid #ccc;
+}
+
 .container.create-quizz h2 {
     margin-top: 1.5em;
     margin-bottom: 1.5em;

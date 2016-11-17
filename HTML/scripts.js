@@ -1,5 +1,6 @@
 document.getElementById('add-question-response').onclick = function(e){
 
+    // Don't submit the form
     e.preventDefault();
 
     var modelFieldSet = document.getElementsByClassName('question-response')[0];

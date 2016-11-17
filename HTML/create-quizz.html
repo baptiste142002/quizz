@@ -9,26 +9,32 @@
 <body>
     <div class="container create-quizz">
 
-        <h1>Title :</h1>
+        <h1>Create quizz </h1>
 
         <h3><a href="index.html">School quizz home</a></h3>
-
-        <h2>Matter :</h2>
-
-        <ul class="menu">
-            <li>Maths</li>
-            <li>English</li>
-            <li>History</li>
-        </ul>
-
-        <h2>Question :</h2>
-        <h4>(example: What is the French word for table ?)</h4>
-        <h2>Answer :</h2>
-        <h4>(example : Table)</h4>
 
 
 
         <form action="" >
+
+            <fieldset>
+                <label>Quizz title:</label>
+                <input type="text" name="title" />
+                <label>Choose matter:</label>
+                <select name="matter" >
+                    <option value="maths">
+                        Maths
+                    </option>
+                    <option value="english">
+                        English
+                    </option>
+                    <option value="history">
+                        History
+                    </option>
+                </select>
+
+            </fieldset>
+
 
             <div id="question-list">
 
