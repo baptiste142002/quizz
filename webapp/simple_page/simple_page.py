@@ -8,6 +8,7 @@ simple_page = Blueprint('simple_page', __name__,
 
 @simple_page.route('/list', methods=['GET'])
 def show():
+    print (database.list_quizz)
     try:
         return render_template('quizz/list-quizz.html', les_quizzes = database.list_quizz)
     except TemplateNotFound:
@@ -53,8 +54,10 @@ def test():
 
 @simple_page.route('/sauver', methods=['POST'])
 def hello():
-    print("")
+    print(database.list_quizz)
     database.list_quizz.append("David")
+    print(database.list_quizz)
+
     return ""
     #name=request.form['yourname']
     #email=request.form['youremail']
