@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create quizz</title>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container create-quizz">
+
+        <h1>Create quizz </h1>
+
+        <h3><a href="{{ url_for ('simple_page.index') }}">School quizz home</a></h3>
+
+
+
+        <form action="/sauver" method="post" >
+
+            <fieldset>
+                <label>Quizz title:</label>
+                <input type="text" name="title" />
+                <label>Choose matter:</label>
+                <select name="matter" >
+                    <option value="select">
+                        --Select--
+                    </option>
+                    <option value="english">
+                        English
+                    </option>
+                    <option value="history">
+                        History
+                    </option>
+                    <option value="maths">
+                        Maths
+                    </option>
+                </select>
+
+            </fieldset>
+
+
+            <div id="question-list">
+
+                <fieldset class="question-response">
+
+                    <label>Question: </label>
+                    <p>(example: What is the French word for table ?)</p>
+                    <input type="text" name="question"/>
+
+                    <label>Response: </label>
+                    <p>(example : Table)</p>
+                    <input type="text" name="response"/>
+
+                </fieldset>
+
+            </div>
+
+            <button id="add-question-response">Add a question</button>
+            <button type="submit">Save</button>
+
+
+        </form>
+
+    </div>
+
+     <script type="text/javascript" src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+
+</body>
+</html>

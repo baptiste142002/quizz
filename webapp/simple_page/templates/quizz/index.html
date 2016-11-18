@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>School quizz home</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <h1>School quizz</h1>
+        <ul class="menu">
+            <li>
+                <h2><a href="{{ url_for ('simple_page.show') }}">Quizz list</a></h2>
+
+            </li>
+            <li>
+                <h2><a href="{{ url_for ('simple_page.create_quizz') }}">Create quizz</a></h2>
+            </li>
+        </ul>
+
+    </div>
+</body>
+</html>

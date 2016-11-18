@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+/* Default styles */
+.container {
+    width: 40%;
+    margin: auto;
+    margin-top: 40px
+
+}
+
+h1 {
+    margin-bottom: 1em
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0
+}
+
+.menu li {
+    border-top: 1px solid #ccc
+}
+
+h3 a {
+    margin-bottom: 1.5em;
+    color: red
+
+}
+
+/* Styles only for page: create-quizz */
+.container.create-quizz{
+
+}
+
+.container.create-quizz h1{
+    border: 1px solid #ccc;
+}
+
+.container.create-quizz h2 {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    color: red
+}
+
+.container.create-quizz form label {
+    display: block;
+    margin: 20px 0 0 0;
+}
+.container.create-quizz form p {
+    display: block;
+    margin: 3px 0 10px 0;
+}
+
+/* Styles only for page: play-quizz */
+.container.play-quizz{
+
+}

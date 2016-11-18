@@ -1,3 +1,5 @@
+var i = 0;
+
 document.getElementById('add-question-response').onclick = function(e){
 
     // Don't submit the form
@@ -11,4 +13,3 @@ document.getElementById('add-question-response').onclick = function(e){
     document.getElementById('question-list').appendChild(divClone);
 
 };
-

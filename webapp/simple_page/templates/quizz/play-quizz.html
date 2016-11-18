@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create quizz</title>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container create-quizz">
+
+    <h1>Play quizz :</h1>
+
+    <h2><a href="{{ url_for ('simple_page.index') }}">School quizz home</a></h2>
+
+    <form action="save" method="posts">
+
+    {% for item in traductions %}
+        <p>What is the French word for : </p>
+        <p>{{item}}</p>
+        <p>Response</p>
+        <input type="text" name="response" value=""/>
+    {% endfor %}
+
+        <button type="submit">Save</button>
+    </form>
+
+</div>
+
+</body>
+</html>
