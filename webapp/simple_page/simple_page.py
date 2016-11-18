@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, abort
+from flask import request
 from jinja2 import TemplateNotFound
 
 from webapp.simple_page import database
@@ -6,8 +7,10 @@ from webapp.simple_page import database
 simple_page = Blueprint('simple_page', __name__,
                         template_folder='templates')
 
+
 @simple_page.route('/list', methods=['GET'])
 def show():
+
     print (database.list_quizz)
     try:
         return render_template('quizz/list-quizz.html', les_quizzes = database.list_quizz)
@@ -54,8 +57,8 @@ def test():
 
 @simple_page.route('/sauver', methods=['POST'])
 def hello():
-    print(database.list_quizz)
-    database.list_quizz.append("David")
+    title = request.form['title']
+    database.list_quizz.append(title)
     print(database.list_quizz)
 
     return ""
